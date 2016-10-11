@@ -11,6 +11,9 @@ import json
 import httplib
 from uuid import uuid4
 
+
+# This way of handling authentication is inspried by Google's OAuth2Client library
+
 class ClientRedirectServer(BaseHTTPServer.HTTPServer):
     """A server to handle OAuth 2.0 redirects back to localhost.
 
