@@ -19,6 +19,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>481356B6-F6C2-4864-86F5-E0C287A22F6F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2E1F183E-D841-40FF-9665-22C4E93E920A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A5DD27B3-C700-4CB2-8E64-748DEA397D50</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E851412C-9B08-47A7-927A-9D2AF298FC3B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>DDC43A50-38DB-4CC5-8C0E-8D5F951F176B</key>
 		<array>
 			<dict>
@@ -46,14 +72,33 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>You were logged out of extension.</string>
+				<key>title</key>
+				<string>Logout Complete</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>2E1F183E-D841-40FF-9665-22C4E93E920A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>query=$1
-
-echo -n $query</string>
+				<string>PYTHONPATH=./libs python logout.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -113,6 +158,27 @@ echo -n $query</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Just giving you an ack.</string>
+				<key>title</key>
+				<string>Tweet Sent</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>E851412C-9B08-47A7-927A-9D2AF298FC3B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -138,6 +204,13 @@ echo -n $query</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>2E1F183E-D841-40FF-9665-22C4E93E920A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>660</integer>
+			<key>ypos</key>
+			<integer>90</integer>
+		</dict>
 		<key>478E1342-0435-46E9-9817-6177413843E4</key>
 		<dict>
 			<key>xpos</key>
@@ -165,6 +238,13 @@ echo -n $query</string>
 			<integer>80</integer>
 			<key>ypos</key>
 			<integer>90</integer>
+		</dict>
+		<key>E851412C-9B08-47A7-927A-9D2AF298FC3B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>660</integer>
+			<key>ypos</key>
+			<integer>270</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
