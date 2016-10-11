@@ -1,0 +1,4 @@
+PyJWT
+requests==2.11.1
+emoji==0.3.9
+Alfred-Workflow==1.22
