@@ -98,15 +98,12 @@ def authorize(**kwargs):
 
     redirect_uri = 'http://localhost:%s/callback' % str(port)
 
-    print "Challenge: %s" % challenge
-    print "Secret: %s" % secret
 
     kwargs["code_challenge"] = challenge
     kwargs["code_challenge_method"] = "S256"
     kwargs["response_type"] = "code"
     kwargs["redirect_uri"] = redirect_uri
     url = get_authorize_url(**kwargs)
-    print "Opening %s in browser, please authenticate in browser" % url
     webbrowser.open(url)
 
     httpd.handle_request()
@@ -129,13 +126,11 @@ def authorize(**kwargs):
             "content-type": "application/json"
         }
 
-        print json.dumps(payload)
         response = requests.post(
             token_endpoint,
             data=json.dumps(payload),
             headers=headers
         )
-        print response.status_code
 
         json_response = response.json()
 
